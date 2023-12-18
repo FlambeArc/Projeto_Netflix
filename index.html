@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="CSS/fontawesome.min.css">
     <link rel="stylesheet" href="CSS/solid.min.css">
     <link rel="stylesheet" href="CSS/brands.min.css">
@@ -56,5 +57,60 @@
             <a href=""><i class="fa-solid fa-circle-info"></i></i>Mais informações</a>
         </div><!--texto-->
     </section>
+    <section class="vitrine">
+        <div class="flex">
+            <div class="single">
+                <div style="background-image: url('Imagens/background1.jpg');" class="wraper"></div>
+            </div>
+            <div class="single">
+                <div style="background-image: url('Imagens/background2.jpg');" class="wraper"></div>
+            </div>
+            <div class="single">
+                <div style="background-image: url('Imagens/background3.jpg');" class="wraper"></div>
+            </div>
+            <div class="single">
+                <div style="background-image: url('Imagens/montanha.jpg');" class="wraper"></div>
+            </div>
+            <div class="single">
+                <div style="background-image: url('Imagens/montanha.webp');" class="wraper"></div>
+            </div>
+            <div class="single">
+                <div style="background-image: url('Imagens/background1.jpg');" class="wraper"></div>
+            </div>
+            <div class="clear"></div>
+        </div><!--flex-->
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js
+    "></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.flex').slick({
+            dots: false,
+            arrows: false,
+            infinite: false,
+            centerMode: false,
+            speed: 1000,
+            slidesToShow: 6,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slideToShow: 3
+                    }
+                }
+            ]
+        })
+
+        $('.wraper').hover(function(){
+            $(this).css('z-index','1000');
+        })
+
+        $('.wraper').mouseout(function(){
+            $(this).css('z-index','0');
+        })
+    </script>
 </body>
 </html>
