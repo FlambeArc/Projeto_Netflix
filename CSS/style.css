@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Helvetica";
 }
 
 body{
-    background: gray;
+    background: black;
 }
 
 .clear{
@@ -48,6 +49,7 @@ header{
 .menu li{
     margin-right: 15px;
     display: inline-block;
+    font-size: 14px;
 }
 
 /**/
@@ -96,4 +98,78 @@ header{
 .right a{
     color: white;
     text-decoration: none;
+}
+
+/**/
+
+/* Destaque */
+
+section.destaque{
+    background-image: url('../Imagens/montanha.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    z-index: 1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#video{
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.texto{
+    color: white;
+    position: relative;
+    z-index: 3;
+    margin-left: 4%;
+    margin-top: 90px;
+}
+
+.texto h2{
+    color: #b10f17;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.texto h3{
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.texto p{
+    font-size: 25px;
+}
+
+.texto a{
+    background-color: rgba(60, 60, 60, 0.3);
+    color: white;
+    text-decoration: none;
+    padding: 8px 40px;
+    display: inline-block;
+    font-size: 23px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.texto a:hover{
+    background: white;
+    color: black;
 }
